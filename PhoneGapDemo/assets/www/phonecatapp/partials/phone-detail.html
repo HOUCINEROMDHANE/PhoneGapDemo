@@ -1,0 +1,183 @@
+<div id="phonedetails" ng-style="{
+		'background-color': '#cbe0cf',
+		'color': '#000000',
+		'height': '100%',
+		'left': '0px',
+		'position': 'absolute',
+		'top': '0px',
+		'width': '100%'
+	}" updatesize>
+	<div id="page-header" ng-style="{
+		'position': 'absolute',
+		'left': '0px',
+		'top': '0px',
+		'width': '100%',
+		'background-color': 'rgb(203, 224, 207)',
+		'height': '55px'
+	}">
+		<div id="back-button" ng-click="changeView('/phones/')" ng-style="{
+			'position': 'absolute',
+			'cursor': 'pointer',
+			'left': '5px',
+			'top': '5px',
+			'background-color': '#CD0000',
+			'border-radius': '5px',
+			'color': 'rgb(255, 255, 255)',
+			'font-family': 'Helvetica',
+			'font-size': '13px',
+			'font-style': 'normal',
+			'font-weight': '700',
+			'text-align': 'center',
+			'text-decoration': 'none',
+			'text-shadow': 'none',
+			'height': '45px',
+			'line-height': '45px',
+			'width': '114px'
+		}">&lt; Back</div>
+		<div id="title" ng-style="{
+			'position': 'absolute',
+			'cursor': 'pointer',
+			'left': '124px',
+			'top': '5px',
+			'background-color': '#F5831D',
+			'border-radius': '5px',
+			'color': 'rgb(255, 255, 255)',
+			'font-family': 'Helvetica',
+			'font-size': '13px',
+			'font-style': 'normal',
+			'font-weight': '700',
+			'text-align': 'center',
+			'text-decoration': 'none',
+			'text-shadow': 'none',
+			'height': '45px',
+			'line-height': '45px',
+			'width': '367px'
+		}">{{phone.name}}</div>
+	</div>
+	
+	<div id="page-body" ng-style="{
+		'position': 'absolute',
+		'background-color': '#00A4E0',
+		'color': '#000000',
+		'left': '0px',
+		'top': '55px',
+		'overflow':'hidden',
+		'width': '100%',
+		'height': '300px'
+	}">
+		<ul>
+			<li ng-style="{
+				'display': 'block',
+				'overflow': 'visible',
+				'position': 'relative',
+				'text-align': 'left',
+				'cursor': 'pointer',
+				'font-family': 'Helvetica,Arial,sans-serif',
+				'text-decoration': 'none',
+				'color': '#222',
+				'font-weight': 'bold',
+				'text-shadow': '0 1px 0 #fff',
+				'height': '300px',
+				'background-color': '#FFFFFF',
+				'border-bottom': '1px solid #9daca9',
+				'border-top': '1px solid #fff'
+			}">
+				<img ng-style="{
+						'position': 'absolute',
+						'top': '25px',
+						'width': '250px',
+						'background-color': 'white',
+						'overflow': 'hidden'
+					}" 
+					ng-src="{{mainImageUrl}}" />
+			</li>
+			<li ng-style="{
+				'display': 'block',
+				'overflow': 'visible',
+				'position': 'relative',
+				'text-align': 'left',
+				'cursor': 'pointer',
+				'font-family': 'Helvetica,Arial,sans-serif',
+				'text-decoration': 'none',
+				'color': '#222',
+				'font-weight': 'bold',
+				'text-shadow': '0 1px 0 #fff',
+				'height': '100px',
+				'background-color': '#FFFFFF',
+				'border-bottom': '1px solid #9daca9',
+				'border-top': '1px solid #fff'
+			}">
+					<img ng-repeat="img in phone.images" ng-style="{
+						'width': '100px',
+						'background-color': 'white',
+						'overflow': 'hidden'
+					}" ng-src="{{img}}" ng-click="setImage(img)">
+			</li>
+			<li ng-style="{
+				'display': 'block',
+				'overflow': 'visible',
+				'position': 'relative',
+				'text-align': 'left',
+				'cursor': 'pointer',
+				'font-family': 'Helvetica,Arial,sans-serif',
+				'text-decoration': 'none',
+				'color': '#222',
+				'font-weight': 'normal',
+				'text-shadow': '0 1px 0 #fff',
+				'height': '300px',
+				'background-color': '#FFFFFF',
+				'border-bottom': '1px solid #9daca9',
+				'border-top': '1px solid #fff'
+			}">
+				<p ng-style="{
+					'font-family': 'Helvetica,Arial,sans-serif',
+					'font-size': '22px',
+					'font-style': 'normal',
+					'font-weight': '700',
+					'text-align': 'left',
+					'text-decoration': 'none',
+					'text-shadow': 'none'
+				}">{{phone.name}}</p>
+				<br><br>
+				<p ng-style="{
+					'font-family': '\'Helvetica Neue\'' + ',Helvetica,Arial,sans-serif',
+					'font-size': '14px',
+					'font-style': 'normal',
+					'text-align': 'justify',
+					'text-decoration': 'none',
+					'text-shadow': 'none'
+				}">{{phone.description}}</p>
+				
+			</li>
+		</ul>
+	</div>
+	
+	<div id="page-footer" ng-style="{
+		'position': 'absolute',
+		'left': '0px',
+		'bottom': '0px',
+		'width': '100%',
+		'background-color': 'rgb(203, 224, 207)',
+		'height': '55px'
+	}">
+		<div id="footer-text" ng-style="{
+			'position': 'absolute',
+			'cursor': 'pointer',
+			'left': '5px',
+			'bottom': '5px',
+			'background-color': '#F5831D',
+			'border-radius': '5px',
+			'color': 'rgb(255, 255, 255)',
+			'font-family': 'Helvetica',
+			'font-size': '13px',
+			'font-style': 'normal',
+			'font-weight': '700',
+			'text-align': 'center',
+			'text-decoration': 'none',
+			'text-shadow': 'none',
+			'height': '45px',
+			'line-height': '45px',
+			'width': '367px'
+		}">(c) 2015 - Houcine Romdhane</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+js/plugins/camera.js
+js/demo/demo.js
+js/demo/utils.js
+js/demo/globals.js
+js/demo/app/app.js
+js/demo/app/panels/background.js
+js/demo/app/panels/listview.js
+js/demo/app/panels/takepicture.js
+js/demo/app/panels/googlemaps.js

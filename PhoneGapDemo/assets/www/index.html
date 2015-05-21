@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/bootloader/environment.js"></script>
+		<script type="text/javascript" src="js/bootloader/mainconfig.js"></script>
+		<script type="text/javascript" src="js/bootloader/debug.js"></script>
+		
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+		<script type="text/javascript" src="js/libs/build/jquery-2.1.1/jquery-2.1.1.js"></script>
+		
+		<script type="text/javascript" src="js/bootloader/LAB.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/bootloader/scriptloader.js"></script>
+		
+		<script src="js/libs/build/cordova-2.4.0.js"></script>
+
+		<script type="text/javascript">
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			$(document).ready(ScriptLoader.start);
+		</script>
+
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+			.gradient {
+			   filter: none;
+			}
+		  </style>
+		<![endif]-->
+		<!-- -->
+	</head>
+
+	<body>
+		<div id="mainContent" style="
+			background-color:rgb(128, 128, 128);
+			width:100%;
+			height:100%;
+		">
+			</div>
+		</div>
+	</body>
+</html>

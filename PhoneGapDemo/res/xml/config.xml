@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cordova>
+
+    <!--
+    access elements control the Android whitelist.
+    Domains are assumed blocked unless set otherwise
+    -->
+
+	
+    <!-- <access origin="https://example.com" /> allow any secure requests to example.com -->
+    <!-- <access origin="https://example.com" subdomains="true" /> such as above, but including subdomains, such as www -->
+    <access origin="*" subdomains="true" />
+
+	<access origin="http://ajax.googleapis.com" subdomains="true"/>
+	<access origin="http://code.jquery.com" subdomains="true"/>
+    
+    <access origin="http://ajax.googleapis.com" subdomains="true"/>
+	<access origin="http://maps.googleapis.com" subdomains="true"/>
+	<access origin="https://maps.googleapis.com" subdomains="true"/>
+	<access origin="https://maps.gstatic.com" subdomains="true"/>
+	
+	<access origin="http://*.google.com" subdomains="true"/>
+	<access origin="https://*.googleapis.com" subdomains="true"/>
+	<access origin="https://*.gstatic.com" subdomains="true"/>
+	
+	<access origin="*.google.com"/>
+    <access origin="*.googleapis.com"/>	
+	
+	<access origin="*://*.googleapis.com/*" subdomains="true" />
+	<access origin="*://*.gstatic.com/*" subdomains="true" />
+	<access origin="*://*.google.com/*" subdomains="true" />
+	<access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    
+    <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
+    <content src="index.html" />
+
+    <log level="DEBUG" />
+
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/> 
+    
+    <preference
+        name="useBrowserHistory"
+        value="true" />
+    <preference
+        name="exit-on-suspend"
+        value="false" />
+
+    <plugins>
+        <plugin
+            name="App"
+            value="org.apache.cordova.App" />
+        <plugin
+            name="Geolocation"
+            value="org.apache.cordova.GeoBroker" />
+        <plugin
+            name="Device"
+            value="org.apache.cordova.Device" />
+        <plugin
+            name="Accelerometer"
+            value="org.apache.cordova.AccelListener" />
+        <plugin
+            name="Compass"
+            value="org.apache.cordova.CompassListener" />
+        <plugin
+            name="Media"
+            value="org.apache.cordova.AudioHandler" />
+        <!-- <plugin name="Camera" value="org.apache.cordova.CameraLauncher"/> -->
+        <plugin
+            name="Contacts"
+            value="org.apache.cordova.ContactManager" />
+        <plugin
+            name="File"
+            value="org.apache.cordova.FileUtils" />
+        <plugin
+            name="NetworkStatus"
+            value="org.apache.cordova.NetworkManager" />
+        <plugin
+            name="Notification"
+            value="org.apache.cordova.Notification" />
+        <plugin
+            name="Storage"
+            value="org.apache.cordova.Storage" />
+        <plugin
+            name="FileTransfer"
+            value="org.apache.cordova.FileTransfer" />
+        <plugin
+            name="Capture"
+            value="org.apache.cordova.Capture" />
+        <plugin
+            name="Battery"
+            value="org.apache.cordova.BatteryListener" />
+        <plugin
+            name="SplashScreen"
+            value="org.apache.cordova.SplashScreen" />
+        <plugin
+            name="Echo"
+            value="org.apache.cordova.Echo" />
+        <plugin
+            name="Globalization"
+            value="org.apache.cordova.Globalization" />
+        <plugin
+            name="InAppBrowser"
+            value="org.apache.cordova.InAppBrowser" />
+
+        <!-- Plugin to camera -->
+        <plugin
+            name="Camera"
+            value="com.magictools.phonegap.demos.ForegroundCameraLauncher" />
+    </plugins>
+
+</cordova>
